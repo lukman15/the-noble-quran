@@ -37,7 +37,9 @@ class V3::SearchController < ApplicationController
   
     protected
   
- 
+    def language
+        params[:language] || 'en'
+      end
   
     def query
       params[:q] || params[:query]
